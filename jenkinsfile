@@ -1,0 +1,9 @@
+node{
+    
+stage('checkout code'){
+    git branch: 'dev', credentialsId: '0db00b0f-6114-4e43-8c57-f6abc4ec33ba', url: 'https://github.com/Redwood-neova/maven-standalone-application.git'
+}
+stage('build'){
+  mvn clean package
+}
+}
